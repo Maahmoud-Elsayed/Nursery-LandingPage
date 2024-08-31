@@ -6,7 +6,7 @@ type EmailTemplateProps = {
   age: string;
   phoneNumber: string;
   userName: string;
-  question: string;
+  question?: string;
   date: string;
 };
 
@@ -48,9 +48,11 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
       <p>
         <strong>Branch:</strong> {address}
       </p>
-      <p>
-        <strong>Question:</strong> {question}
-      </p>
+      {question && (
+        <p>
+          <strong>Question:</strong> {question}
+        </p>
+      )}
       <p style={{ marginTop: "30px", color: "#888" }}>
         This email was generated automatically based on a form submission from
         the Al Dana Nursery landing page.

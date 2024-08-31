@@ -19,10 +19,7 @@ export const clientFormSchema = (t: (key: string, data?: any) => string) => {
 
     date: z.date({ message: t("required") }),
 
-    question: z
-      .string()
-      .trim()
-      .min(1, { message: t("required") }),
+    question: z.string().trim().optional(),
     address: z
       .string()
       .trim()
@@ -50,5 +47,5 @@ export const serverFormSchema = z.object({
     .min(1, { message: "Required" })
     .regex(/^\+?[\d\s\-\.()]{7,}$/, { message: "Invalid phone number" }),
   date: z.string().trim().min(1, { message: "Required" }),
-  question: z.string().trim().min(1, { message: "Required" }),
+  question: z.string().trim().optional(),
 });
