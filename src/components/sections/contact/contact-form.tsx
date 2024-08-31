@@ -316,7 +316,7 @@ const ContactForm = () => {
         </div>
         <LoadingButton
           type="submit"
-          className="w-full !rounded-full uppercase bg-lime hover:bg-lime text-primary"
+          className="w-full !rounded-full uppercase bg-lime hover:bg-lime text-primary border border-white"
           size="lg"
           disabled={isSubmitting}
           isLoading={isSubmitting}
