@@ -46,7 +46,7 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
         <strong>Date:</strong> {date}
       </p>
       <p>
-        <strong>Address:</strong> {address}
+        <strong>Branch:</strong> {address}
       </p>
       <p>
         <strong>Question:</strong> {question}
