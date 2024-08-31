@@ -13,15 +13,13 @@ export default function Home({
 }) {
   setRequestLocale(locale);
   return (
-    <div className="my-20">
-      {/* <HeroSection /> */}
-      <Values href="/1.jpg" />
-      <Values href="/2.jpg" />
-      <Values href="/3.jpg" />
-      {/* <Curriculum />
+    <>
+      <HeroSection />
+      <Values />
+      <Curriculum />
       <Services />
       <Features />
-      <Contact /> */}
-    </div>
+      <Contact />
+    </>
   );
 }

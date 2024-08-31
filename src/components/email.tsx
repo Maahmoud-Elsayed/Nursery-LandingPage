@@ -6,6 +6,8 @@ type EmailTemplateProps = {
   age: string;
   phoneNumber: string;
   userName: string;
+  question: string;
+  date: string;
 };
 
 export const EmailTemplate: React.FC<EmailTemplateProps> = ({
@@ -14,6 +16,8 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
   age,
   phoneNumber,
   userName,
+  question,
+  date,
 }) => {
   return (
     <div
@@ -36,10 +40,16 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
         <strong>Phone Number:</strong> {phoneNumber}
       </p>
       <p>
+        <strong>Age:</strong> {age}
+      </p>
+      <p>
+        <strong>Date:</strong> {date}
+      </p>
+      <p>
         <strong>Address:</strong> {address}
       </p>
       <p>
-        <strong>Age:</strong> {age}
+        <strong>Question:</strong> {question}
       </p>
       <p style={{ marginTop: "30px", color: "#888" }}>
         This email was generated automatically based on a form submission from

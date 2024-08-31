@@ -44,6 +44,13 @@ const Contact = () => {
               </p>
             </div>
           </div>
+          <div className="hidden lg:flex justify-center !mt-40 items-center ">
+            <div className=" space-y-2">
+              <Circles className="ms-20" />
+              <Circles Variant="secondary" />
+              <Circles className="ms-20" />
+            </div>
+          </div>
         </div>
         <div className="basis-1/2 bg-white grow flex items-center justify-center">
           <ContactForm />

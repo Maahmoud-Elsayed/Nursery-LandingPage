@@ -102,12 +102,17 @@
         "phone": "Phone Number"
       },
       "form": {
-        "name": "Full Name",
-        "age": "Age",
+        "name": "Name",
+        "age": "Select your child's age group",
         "email": "Email",
-        "phone": "Phone",
-        "address": "Address",
-        "submit": "Submit Admission",
+        "phone": "Phone number",
+        "date": "When would you like to visit us?",
+        "address": "Select the branch",
+        "question": "Do you have any questions? Feel free to ask.",
+        "defAge": "Select age group",
+        "defBranch": "Select branch",
+        "defDate": "Pick a date",
+        "submit": "Submit my details",
         "loading": "submitting...",
         "toast": {
           "loading": "submitting...",
@@ -115,6 +120,25 @@
           "failed": "something went wrong",
           "error": "Submit has been failed, please try again later",
           "done": "Submitted successfully"
+        },
+        "branches": {
+          "branch1": "Stanford Khalifa A",
+          "branch2": "Stanford Zakher",
+          "branch3": "Stanford Mohamed Bin Zayed",
+          "branch4": "Stanford Nad Al Hamar",
+          "branch5": "Stanford Khorfakkan",
+          "branch6": "Stanford Al Sarooj",
+          "branch7": "Stanford Al Towayya",
+          "branch8": "Stanford Al Mushrif",
+          "branch9": "Stanford Al Shahama",
+          "branch10": "Stanford Shakhbout",
+          "branch11": "Stanford Al Shamekha"
+        },
+        "ages": {
+          "age1": "4 to 12 months",
+          "age2": "1 to 2 years",
+          "age3": "2 to 3 years",
+          "age4": "3 to 4 years"
         }
       }
     }
