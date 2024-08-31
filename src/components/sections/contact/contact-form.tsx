@@ -8,10 +8,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { arSA, enUS } from "date-fns/locale";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMessages, useTranslations } from "next-intl";
+import { useLocale, useMessages, useTranslations } from "next-intl";
 import { z } from "zod";
 import { FieldErrors, type SubmitHandler, useForm } from "react-hook-form";
 import { clientFormSchema } from "@/lib/form-validation";
@@ -34,11 +35,14 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
 import { CalendarIcon } from "lucide-react";
+import { Locale } from "@/routing";
 
 type FormData = z.infer<ReturnType<typeof clientFormSchema>>;
 const ContactForm = () => {
   const t = useTranslations("sections.contact.form");
   const tZod = useTranslations("zod");
+
+  const locale = useLocale() as Locale;
 
   const messages = useMessages();
   //@ts-ignore
@@ -242,12 +246,21 @@ const ContactForm = () => {
                       <PopoverContent className="w-auto p-0" align="start">
                         <Calendar
                           mode="single"
+                          weekStartsOn={6}
+                          locale={locale === "en" ? enUS : arSA}
+                          dir={locale === "en" ? "ltr" : "rtl"}
                           selected={field.value}
                           onSelect={field.onChange}
                           disabled={(date) =>
                             date > new Date() || date < new Date("1900-01-01")
                           }
                           initialFocus
+                          classNames={{
+                            nav_button_previous:
+                              "rtl:right-1 absolute ltr:left-1 top-1/2 -translate-y-1/2",
+                            nav_button_next:
+                              "rtl:left-1  ltr:right-1 absolute  top-1/2 -translate-y-1/2",
+                          }}
                         />
                       </PopoverContent>
                     </Popover>
@@ -316,7 +329,7 @@ const ContactForm = () => {
         </div>
         <LoadingButton
           type="submit"
-          className="w-full !rounded-full uppercase bg-lime hover:bg-lime text-primary border border-white"
+          className="w-full !rounded-full uppercase bg-lime hover:bg-lime text-primary border-2 border-white"
           size="lg"
           disabled={isSubmitting}
           isLoading={isSubmitting}
