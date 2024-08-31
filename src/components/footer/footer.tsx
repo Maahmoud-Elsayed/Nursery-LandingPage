@@ -50,22 +50,23 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 justify-between flex-1">
+        <div className="flex flex-col gap-6 justify-between flex-1">
           <h3 className=" text-lg md:text-2xl font-semibold ">{t("title")}</h3>
-
-          <div className="flex gap-3 items-center text-muted-foreground ">
-            <Email className="w-5 h-5 min-h-5 min-w-5 self-start" />
-            <span className="text-gray-200 text-[15px]">{t("address")}</span>
-          </div>
-          <div className="flex gap-3 items-center text-muted-foreground ">
-            <Email className="h-5 w-5" />
-            <span className="text-gray-200 text-[15px]">Hello@Email.com</span>
-          </div>
-          <div className="flex gap-3 items-center text-muted-foreground ">
-            <Phone className="h-5 w-5" />
-            <span className=" text-[15px] text-gray-200" dir="ltr">
-              +971 058 588 9985
-            </span>
+          <div className="space-y-4">
+            <div className="flex gap-3 items-center text-muted-foreground ">
+              <Email className="w-5 h-5 min-h-5 min-w-5 mt-1 sm-mt-0 self-baseline md:self-center" />
+              <span className="text-gray-200 text-[15px]">{t("address")}</span>
+            </div>
+            <div className="flex gap-3 items-center text-muted-foreground ">
+              <Email className="h-5 w-5" />
+              <span className="text-gray-200 text-[15px]">Hello@Email.com</span>
+            </div>
+            <div className="flex gap-3 items-center text-muted-foreground ">
+              <Phone className="h-5 w-5" />
+              <span className=" text-[15px] text-gray-200" dir="ltr">
+                +971 058 588 9985
+              </span>
+            </div>
           </div>
         </div>
       </Container>

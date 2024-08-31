@@ -17,12 +17,12 @@ const HeroSection = () => {
         <div className=" w-full md:basis-1/2">
           <p className="text-lime text-xl mt-2">{t("title")}</p>
           <div className="relative">
-            <h1 className="text-2xl md:text-6xl font-bold text-primary-dark md:leading-[4.5rem] leading-[3rem] mt-5">
+            <h1 className="text-3xl md:text-6xl font-bold text-primary-dark md:leading-[4.5rem] leading-[3rem] mt-5">
               {t("subtitle1")}
               <br />
               <span className=" text-nowrap">{t("subtitle2")}</span>
             </h1>
-            <div className=" lg:hidden absolute end-10 top-6">
+            <div className=" lg:hidden absolute end-10 top-10">
               <Circles />
             </div>
           </div>
@@ -34,7 +34,7 @@ const HeroSection = () => {
           >
             <LineScratch className="md:mt-2 w-52 h-10 md:w-[428px]" />
           </MotionDiv>
-          <p className=" text-primary-text text-lg leading-relaxed md:mt-5 max-w-prose">
+          <p className=" text-primary-text text-lg leading-relaxed md:mt-5 max-w-prose text-pretty">
             {t("description")}
           </p>
           <Link
@@ -49,7 +49,7 @@ const HeroSection = () => {
             {t("button")}
           </Link>
         </div>
-        <div className="flex-1 flex items-start justify-between lg:hidden ">
+        <div className="flex-1 flex mt-12 items-start justify-between lg:hidden ">
           <Link
             className={buttonVariants({
               variant: "default",
@@ -76,7 +76,7 @@ const HeroSection = () => {
                 </p>
               </div>
             </MotionDiv>
-            <div className=" relative overflow-hidden  h-60 w-44 sm:w-60 -mt-10">
+            <div className=" relative overflow-hidden  h-60 w-44 sm:w-60 -mt-12 ">
               <Image
                 src="/images/little-boy.png"
                 alt="hero"
@@ -87,7 +87,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="basis-1/2 hidden lg:flex flex-col justify-center ">
-          <div className="px-20 mb-8 lg:pt-20">
+          <div className="px-20 mb-8 ">
             <Circles />
           </div>
           <div className=" relative w-full">

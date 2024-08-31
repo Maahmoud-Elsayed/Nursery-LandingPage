@@ -16,12 +16,12 @@ const Services = () => {
         <div className="space-y-4 text-center ">
           <div className="flex gap-4 items-center justify-center">
             <Circles Variant="secondary" />
-            <h2 className="text-lime font-semibold text-2xl w-2/3 uppercase">
+            <h2 className="text-lime font-semibold text-xl md:text-2xl w-2/3 uppercase">
               {t("title")}
             </h2>
             <Circles />
           </div>
-          <p className="text-2xl text-pretty md:text-5xl font-semibold text-primary-dark w-2/3 mx-auto  md:leading-[3.5rem]">
+          <p className="text-3xl text-pretty md:text-4xl lg:text-5xl font-semibold text-primary-dark w-2/3 mx-auto  md:leading-[3.5rem]">
             {t("description")}
           </p>
         </div>

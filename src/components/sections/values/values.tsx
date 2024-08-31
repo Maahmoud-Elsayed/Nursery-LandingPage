@@ -26,13 +26,13 @@ const Values = () => {
               fill
             />
           </div>
-          <div className="space-y-4 md:space-y-8 lg:space-y-8 relative">
+          <div className="space-y-6 md:space-y-8 lg:space-y-8 relative">
             <Circles className="absolute top-0 end-20" Variant="secondary" />
             <h2 className="text-primary font-semibold text-xl">{t("title")}</h2>
-            <p className="text-2xl text-pretty md:text-5xl font-semibold text-primary-dark   md:leading-[3.5rem]">
+            <p className="text-3xl text-pretty md:text-4xl lg:text-5xl font-semibold text-primary-dark   md:leading-[3.5rem]">
               {t("description")}
             </p>
-            <h3 className="text-lime font-semibold text-2xl uppercase">
+            <h3 className="text-lime font-semibold text-xl md:text-2xl uppercase">
               {t("subtitle")}
             </h3>
           </div>

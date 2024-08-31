@@ -19,7 +19,7 @@ const Features = () => {
         <div className="space-y-10 lg:space-y-20   flex flex-col">
           <div className="space-y-4">
             <Circles Variant="secondary" />
-            <h2 className="text-2xl text-pretty md:text-5xl font-semibold text-primary-dark  md:leading-[3.5rem]">
+            <h2 className="text-3xl text-pretty md:text-4xl lg:text-5xl font-semibold text-primary-dark  md:leading-[3.5rem]">
               {t("title")}
             </h2>
           </div>

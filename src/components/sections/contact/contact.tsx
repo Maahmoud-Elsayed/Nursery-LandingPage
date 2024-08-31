@@ -11,14 +11,14 @@ const Contact = () => {
       <Container className="flex flex-col lg:flex-row w-full">
         <div className="basis-1/2  space-y-6 md:space-y-8 md:pe-8 pb-10 lg:pb-0 pt-10 md:pt-16 lg:pt-20">
           <Circles className="ms-20 -mt-5 hidden md:block" />
-          <p className="text-2xl text-pretty md:text-5xl font-semibold text-primary-dark   md:leading-[3.5rem]">
+          <p className="text-3xl text-pretty md:text-4xl lg:text-5xl font-semibold text-primary-dark   md:leading-[3.5rem]">
             {t("title")}
           </p>
           <p className="text-primary-text text-pretty text-lg">
             {t("description1")}
           </p>
           <div className="flex justify-between">
-            <h2 className="text-lime font-semibold text-2xl w-2/3 uppercase">
+            <h2 className="text-lime font-semibold text-xl md:text-2xl w-2/3 uppercase">
               {t("subtitle")}
             </h2>
             <Circles className="me-20  md:hidden" />

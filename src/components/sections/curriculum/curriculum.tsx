@@ -8,15 +8,15 @@ const Curriculum = () => {
   return (
     <section className="pt-20 md:pt-32 lg:pt-40" id="curriculum">
       <Container className="flex gap-8">
-        <div className="flex flex-col gap-4 md:gap-8">
-          <div className="flex grow">
-            <h2 className="text-2xl text-pretty md:text-5xl font-semibold text-primary-dark md:leading-[3.5rem]">
+        <div className="flex flex-col gap-6 md:gap-8">
+          <div className="flex grow ">
+            <h2 className="text-3xl text-pretty md:text-4xl lg:text-5xl font-semibold text-primary-dark md:leading-[3.5rem]">
               {t("title")}
             </h2>
-            <Circles className="shrink-0 self-center md:me-10" />
+            <Circles className="shrink-0 self-center me-2 md:me-10" />
           </div>
           <div className="flex gap-8 justify-between ">
-            <div className="text-primary-text space-y-4 md:space-y-8">
+            <div className="text-primary-text space-y-6 md:space-y-8">
               <p className=" text-primary-text text-lg leading-relaxed max-w-prose">
                 {t("description")}
               </p>
