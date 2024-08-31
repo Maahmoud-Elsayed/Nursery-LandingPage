@@ -2,6 +2,7 @@ import Image from "next/image";
 import Container from "@/components/ui/container";
 import { CircleCheck, Circles } from "@/components/ui/icons";
 import { useTranslations } from "next-intl";
+import RegisterButton from "@/components/register-button";
 
 const Curriculum = () => {
   const t = useTranslations("sections.curriculum");
@@ -30,6 +31,7 @@ const Curriculum = () => {
                   <p>{t("opt2")}</p>
                 </div>
               </div>
+              <RegisterButton />
             </div>
             <div className="relative hidden md:block w-[250px] h-[260px] shrink-0 self-end rounded-3xl overflow-hidden">
               <Image src="/images/girl.jpg" alt="girl" fill />

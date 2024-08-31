@@ -11,7 +11,7 @@ const Features = () => {
   const t = useTranslations("sections.features");
   return (
     <Section
-      className="bg-muted-bg pt-20 md:pt-32 lg:pt-40 pb-10 md:pb-16 lg:pb-20"
+      className="bg-muted-bg pt-20  pb-10 md:pb-16 lg:pb-20"
       id="features"
       name="features"
     >
@@ -60,7 +60,7 @@ const Features = () => {
             </span>
           </Link>
         </div>
-        <div className="relative hidden xl:block w-[400px] h-[560px] shrink-0 rounded-3xl overflow-hidden self-end">
+        <div className="relative hidden xl:block w-[400px] h-[550px] shrink-0 rounded-3xl overflow-hidden self-center">
           <Image src="/images/features.jpg" alt="girl" fill />
         </div>
       </Container>

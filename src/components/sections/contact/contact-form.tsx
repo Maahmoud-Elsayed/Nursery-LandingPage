@@ -76,7 +76,7 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="pb-20 pt-10 mt-10 md:mt-16 md:pt-16 lg:mt-20 lg:pt-20 px-5 sm:px-10 space-y-10 w-full"
+        className="pb-20 pt-10 mt-10 md:mt-16 md:pt-16 lg:mt-20 lg:pt-20 px-5 sm:px-10 space-y-10 w-full bg-gray-200 rounded-t-3xl"
       >
         <div className="space-y-6 md:space-y-10">
           <div className="flex flex-col md:flex-row gap-6">

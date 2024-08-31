@@ -3,6 +3,7 @@ import ServiceCard from "./service-card";
 import { useTranslations } from "next-intl";
 import { Circles } from "@/components/ui/icons";
 import Section from "@/components/ui/section";
+import RegisterButton from "@/components/register-button";
 
 const Services = () => {
   const t = useTranslations("sections.services");
@@ -56,6 +57,9 @@ const Services = () => {
           cardClassName="md:-mt-24 md:h-[200px] flex flex-col  justify-center"
           className="md:h-[400px] "
         />
+        <div className="flex justify-center">
+          <RegisterButton />
+        </div>
       </Container>
     </Section>
   );

@@ -42,7 +42,7 @@ const HeroSection = () => {
               variant: "default",
               size: "lg",
               className:
-                "uppercase font-semibold text-sm tracking-widest mt-12 hidden !rounded-full lg:flex w-fit",
+                "uppercase font-semibold text-sm tracking-widest my-12 hidden !rounded-full lg:flex w-fit",
             })}
             href="#services"
           >
