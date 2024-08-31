@@ -107,21 +107,21 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="pb-10 pt-10 mt-10 mb-10 md:mt-16 md:pt-16 lg:mt-20 lg:pt-20 px-5 sm:px-10 space-y-10 w-full bg-gray-300 rounded-3xl"
+        className="pb-10 pt-10 mt-10 mb-10 md:mt-16 shadow-black shadow-lg md:pt-16 lg:mt-20 lg:pt-20 px-5 sm:px-10 space-y-10 w-full bg-primary border-4 border-lime rounded-3xl"
       >
-        <div className="space-y-6 md:space-y-10">
+        <div className="space-y-6 md:space-y-8">
           <FormField
             control={form.control}
             name="userName"
             render={({ field }) => (
               <FormItem className="w-full !space-y-4">
-                <FormLabel className=" !text-semibold text-base !text-primary-dark">
+                <FormLabel className=" !text-semibold text-base !text-white">
                   {t("name")}
                 </FormLabel>
                 <FormControl>
                   <Input
                     {...field}
-                    className="rounded-full w-full bg-white"
+                    className="rounded-full w-full bg-white focus-visible:ring-lime focus-within:ring-offset-lime focus-within:border-lime"
                     disabled={isSubmitting}
                   />
                 </FormControl>
@@ -129,19 +129,19 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
-          <div className="flex flex-col xl:flex-row gap-6 ">
+          <div className="flex flex-col xl:flex-row gap-6 md:gap-8 ">
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem className="w-full !space-y-4">
-                  <FormLabel className=" !text-semibold text-base !text-primary-dark">
+                  <FormLabel className=" !text-semibold text-base !text-white">
                     {t("email")}
                   </FormLabel>
                   <FormControl>
                     <Input
                       {...field}
-                      className="rounded-full w-full bg-white"
+                      className="rounded-full w-full bg-white focus-visible:ring-lime focus-within:ring-offset-lime focus-within:border-lime"
                       disabled={isSubmitting}
                     />
                   </FormControl>
@@ -155,14 +155,14 @@ const ContactForm = () => {
               name="phoneNumber"
               render={({ field }) => (
                 <FormItem className="w-full !space-y-4">
-                  <FormLabel className=" !text-semibold text-base !text-primary-dark">
+                  <FormLabel className=" !text-semibold text-base !text-white">
                     {t("phone")}
                   </FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       type="tel"
-                      className="rounded-full w-full bg-white"
+                      className="rounded-full w-full bg-white focus-visible:ring-lime focus-within:ring-offset-lime focus-within:border-lime"
                       disabled={isSubmitting}
                     />
                   </FormControl>
@@ -172,13 +172,13 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="flex flex-col 2xl:flex-row gap-6 ">
+          <div className="flex flex-col 2xl:flex-row gap-6 md:gap-8 ">
             <FormField
               control={form.control}
               name="age"
               render={({ field }) => (
                 <FormItem className="w-full !space-y-4">
-                  <FormLabel className=" !text-semibold text-base !text-primary-dark">
+                  <FormLabel className=" !text-semibold text-base !text-white">
                     {t("age")}
                   </FormLabel>
                   <Select
@@ -188,11 +188,11 @@ const ContactForm = () => {
                   >
                     <FormControl>
                       <SelectTrigger
-                        className="w-full rounded-full bg-white"
+                        className="w-full text-muted-foreground rounded-full bg-white "
                         disabled={isSubmitting}
                       >
                         <SelectValue
-                          className="w-full rounded-full !text-muted-foreground bg-white"
+                          className="w-full rounded-full  bg-white"
                           placeholder={t("defAge")}
                         />
                       </SelectTrigger>
@@ -216,16 +216,16 @@ const ContactForm = () => {
                 name="date"
                 render={({ field }) => (
                   <FormItem className="flex w-full space-y-4 flex-col">
-                    <FormLabel className=" !text-semibold text-base !text-primary-dark">
+                    <FormLabel className=" !text-semibold text-base !text-white">
                       {t("date")}
                     </FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
-                        <FormControl className="w-full  rounded-full bg-white">
+                        <FormControl className="w-full  rounded-full bg-white ">
                           <Button
                             variant={"outline"}
                             className={cn(
-                              "!w-full ltr:pl-3 rtl:pr-3  rtl:text-left ltr:text-right font-normal flex gap-3 ltr:justify-start rtl:justify-end items-center rtl:flex-row-reverse",
+                              "!w-full ltr:pl-3 rtl:pr-3  rtl:text-left ltr:text-right font-normal flex gap-3 ltr:justify-start rtl:justify-end items-center rtl:flex-row-reverse ",
                               !field.value && "text-muted-foreground"
                             )}
                             disabled={isSubmitting}
@@ -235,7 +235,7 @@ const ContactForm = () => {
                             ) : (
                               <span>{t("defDate")}</span>
                             )}
-                            <CalendarIcon className=" h-4 w-4 opacity-50" />
+                            <CalendarIcon className=" h-4 w-4 " />
                           </Button>
                         </FormControl>
                       </PopoverTrigger>
@@ -262,7 +262,7 @@ const ContactForm = () => {
             name="address"
             render={({ field }) => (
               <FormItem className="w-full !space-y-4">
-                <FormLabel className=" !text-semibold text-base !text-primary-dark">
+                <FormLabel className=" !text-semibold text-base !text-white">
                   {t("address")}
                 </FormLabel>
                 <Select
@@ -271,11 +271,11 @@ const ContactForm = () => {
                 >
                   <FormControl>
                     <SelectTrigger
-                      className="w-full rounded-full bg-white"
+                      className="w-full rounded-full bg-white text-muted-foreground "
                       disabled={isSubmitting}
                     >
                       <SelectValue
-                        className="w-full rounded-full !text-muted-foreground bg-white"
+                        className="w-full rounded-full bg-white "
                         placeholder={t("defBranch")}
                       />
                     </SelectTrigger>
@@ -299,13 +299,13 @@ const ContactForm = () => {
             name="question"
             render={({ field }) => (
               <FormItem className="w-full !space-y-4">
-                <FormLabel className=" !text-semibold text-base !text-primary-dark">
+                <FormLabel className=" !text-semibold text-base !text-white">
                   {t("question")}
                 </FormLabel>
                 <FormControl>
                   <Textarea
                     {...field}
-                    className="h-24 bg-white rounded-3xl"
+                    className="h-24 bg-white rounded-2xl focus-visible:ring-lime focus-within:ring-offset-lime focus-within:border-lime"
                     disabled={isSubmitting}
                   />
                 </FormControl>
@@ -316,7 +316,7 @@ const ContactForm = () => {
         </div>
         <LoadingButton
           type="submit"
-          className="w-full !rounded-full uppercase "
+          className="w-full !rounded-full uppercase bg-lime hover:bg-lime text-primary"
           size="lg"
           disabled={isSubmitting}
           isLoading={isSubmitting}
