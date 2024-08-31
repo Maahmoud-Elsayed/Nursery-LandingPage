@@ -1,0 +1,133 @@
+{
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "About us",
+    "contactUs": "Contact us",
+    "services": "Services",
+    "features": "Features",
+    "admission": "Admission",
+    "buttons": {
+      "language": "Language",
+      "languages": {
+        "en": "English",
+        "ar": "العربية"
+      }
+    }
+  },
+  "sections": {
+    "hero": {
+      "title": "Open new worlds for your child",
+      "subtitle1": "Welcome To",
+      "subtitle2": "Al Dana Nursery",
+      "description": "At Al Dana Nursery, we provide a comprehensive and personalized learning environment that supports children’s growth and development at all stages of their lives. We are committed to providing the best possible start for every child through outstanding care and innovative educational programs.",
+      "button": "our programs",
+      "banner": "Best Kids Programs"
+    },
+    "values": {
+      "title": "At our kindergarten",
+      "subtitle": "Our Values",
+      "description": "We provide a safe and nurturing environment where learn and grow",
+      "list": {
+        "collaboration": {
+          "title": "Collaboration",
+          "description": "We work as a team to achieve the best results for each child"
+        },
+        "creativity": {
+          "title": "Creativity",
+          "description": "We use innovative teaching methods to stimulate creativity and thinking"
+        },
+        "responsibility": {
+          "title": "Responsibility",
+          "description": "We adhere to the highest quality standards in all aspects of childcare"
+        }
+      }
+    },
+    "curriculum": {
+      "title": "Our curriculum is designed to engage and challenge children at every stage",
+      "description": "We seek to make a qualitative leap in the quality of childcare services, with acommitment to excellence and continuous development to ensure a safe educational environment that enhances the potential of every child",
+      "opt1": "Best Programs For Children to Grow",
+      "opt2": "Find Their Best Potential With Us"
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "Our kindergarten provides a range of Services",
+      "cards": {
+        "card1": {
+          "title": "Infant Care",
+          "description": "Special attention to infants from 0-1 years old, providing a safe and stimulating environment that helps them grow and develop healthily."
+        },
+        "card2": {
+          "title": "Toddler Programs",
+          "description": "Activities directed at children from 1-2 years old that focus on developing social and motor skills through educational games and interactive experiences."
+        },
+        "card3": {
+          "title": "Teaching Older Children",
+          "description": " For children aged 3-4 years, we provide an integrated curriculum that includes academic and social activities supporting the development of basic skills and promoting independence."
+        },
+        "card4": {
+          "title": "Special Programs",
+          "description": " Caring for children with special needs and providing additional support programs to ensure they achieve their full potential."
+        }
+      }
+    },
+    "features": {
+      "title": "Our Features",
+      "button": "Admission",
+      "cards": {
+        "card1": {
+          "title": "Qualified Team",
+          "description": "We have a team of highly trained teachers and specialists with extensive experience in providing care and education in a loving and safe environment."
+        },
+        "card2": {
+          "title": "Various Activities",
+          "description": "We offer a comprehensive range of educational and recreational activities that help children develop their social and motor skills in a fun and beneficial way."
+        },
+        "card3": {
+          "title": "Our 12 Branch Locations",
+          "description": "We have multiple branches in convenient locations near homes and workplaces, making it easy for parents to access the nursery."
+        },
+        "card4": {
+          "title": "Flexible Services",
+          "description": "We offer early and late pick-up options to suit parents' work schedules, along with the ability to contact your child at any time."
+        }
+      }
+    },
+    "contact": {
+      "info": {
+        "title": "Register your child with us today",
+        "subtitle": "Contact us",
+        "description1": "We are here to support you and provide the best for your child.",
+        "description2": "to book an appointment and visit our nursery, and discover how we can help you provide the best care and education for your child.",
+        "email": "Email",
+        "phone": "Phone Number"
+      },
+      "form": {
+        "name": "Full Name",
+        "age": "Age",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "submit": "Submit Admission",
+        "loading": "submitting...",
+        "toast": {
+          "loading": "submitting...",
+          "success": "submitted successfully",
+          "failed": "something went wrong",
+          "error": "Submit has been failed, please try again later",
+          "done": "Submitted successfully"
+        }
+      }
+    }
+  },
+
+  "footer": {
+    "title": "Stay Tuned With Us",
+    "address": "Gresik United East Java Nggepeng Village 6312"
+  },
+  "zod": {
+    "email": "Invalid email",
+    "required": "Required",
+    "number": "Invalid number",
+    "short": "{input} must be at least {min} {type}"
+  }
+}
