@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 
 import {
   Email,
-  Facebook,
   Instagram,
   Phone,
   Tiktok,

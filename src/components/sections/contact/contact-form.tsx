@@ -73,7 +73,6 @@ const ContactForm = () => {
   } = form;
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
-    console.log(data);
     try {
       const response = await fetch("/api/send", {
         method: "POST",
