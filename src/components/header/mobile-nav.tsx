@@ -29,7 +29,7 @@ const MobileNav = () => {
       className={cn(
         "md:hidden bg-lime sticky top-0 z-50 border-b-2 border-border/80 transition-colors duration-500 ",
         {
-          "backdrop-blur-sm supports-[backdrop-filter]:bg-background/60":
+          "backdrop-blur-sm supports-[backdrop-filter]:bg-background/40":
             isScrolled,
         }
       )}
