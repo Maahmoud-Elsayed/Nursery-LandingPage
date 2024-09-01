@@ -42,7 +42,7 @@ export default function LocaleSwitcher({ color }: { color?: string }) {
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
-        <button className="flex h-fit w-fit items-center gap-1 p-0 outline-none ">
+        <button className="flex h-fit w-fit items-center gap-1 justify-center p-0 outline-none ">
           {activeLocale === "en" ? (
             <EnFlagIcon className="h-5 w-5" />
           ) : (
