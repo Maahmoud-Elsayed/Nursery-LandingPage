@@ -27,7 +27,6 @@ const Footer = () => {
               <Link
                 href="https://x.com/happyjumpnursry"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="h-6 w-6 group"
               >
                 <Twitter className="h-5 w-5 group-hover:scale-125 transition-all duration-300" />
@@ -35,7 +34,6 @@ const Footer = () => {
               <Link
                 href="https://www.instagram.com/aldananurseries"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="h-6 w-6 group"
               >
                 <Instagram className="h-5 w-5 group-hover:scale-125 transition-all duration-300" />
@@ -43,7 +41,6 @@ const Footer = () => {
               <Link
                 href="https://www.tiktok.com/@aldananursery"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="h-6 w-6 group"
               >
                 <Tiktok className="h-5 w-5 group-hover:scale-125 transition-all duration-300" />
