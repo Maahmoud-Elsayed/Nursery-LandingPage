@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Container from "@/components/ui/container";
 import { CircleCheck, Circles } from "@/components/ui/icons";
 import { useTranslations } from "next-intl";
-import RegisterButton from "@/components/register-button";
+import Image from "next/image";
 
 const Curriculum = () => {
   const t = useTranslations("sections.curriculum");
@@ -17,7 +16,7 @@ const Curriculum = () => {
             <Circles className="shrink-0 self-center me-2 md:me-10" />
           </div>
           <div className="flex gap-8 justify-between ">
-            <div className="text-primary-text space-y-6 md:space-y-8">
+            <div className="text-primary-text space-y-4  md:space-y-10">
               <p className=" text-primary-text text-lg leading-relaxed max-w-prose">
                 {t("description")}
               </p>
@@ -31,7 +30,6 @@ const Curriculum = () => {
                   <p>{t("opt2")}</p>
                 </div>
               </div>
-              <RegisterButton />
             </div>
             <div className="relative hidden md:block w-[250px] h-[260px] shrink-0 self-end rounded-3xl overflow-hidden">
               <Image src="/images/girl.jpg" alt="girl" fill />

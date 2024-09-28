@@ -1,20 +1,20 @@
-import { Rubik } from "next/font/google";
-import "../globals.css";
+import { Toaster } from "@/components/ui/sonner";
 import { locales } from "@/routing";
 import { NextIntlClientProvider } from "next-intl";
-import { Toaster } from "@/components/ui/sonner";
+import { Rubik } from "next/font/google";
+import "../globals.css";
 
+import Footer from "@/components/footer/footer";
+import MainNav from "@/components/header/main-nav";
+import MobileNav from "@/components/header/mobile-nav";
+import TopNav from "@/components/header/top-nav";
+import ScrollToTop from "@/components/ui/scroll-to-top";
+import ActiveSectionContextProvider from "@/context/active-section-context";
+import { getBaseUrl } from "@/lib/utils";
 import {
   getMessages,
   unstable_setRequestLocale as setRequestLocale,
 } from "next-intl/server";
-import TopNav from "@/components/header/top-nav";
-import MainNav from "@/components/header/main-nav";
-import MobileNav from "@/components/header/mobile-nav";
-import ScrollToTop from "@/components/ui/scroll-to-top";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import { getBaseUrl } from "@/lib/utils";
-import Footer from "@/components/footer/footer";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -119,7 +119,7 @@ export default async function RootLayout({
               <MainNav />
               <MobileNav />
 
-              <main className="overflow-hidden">{children}</main>
+              <main className="overflow-x-hidden">{children}</main>
               <Footer />
             </div>
             <ScrollToTop />
@@ -128,6 +128,7 @@ export default async function RootLayout({
               richColors
               theme="light"
               closeButton
+              position="bottom-right"
             />
           </ActiveSectionContextProvider>
         </NextIntlClientProvider>

@@ -8,17 +8,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { arSA, enUS } from "date-fns/locale";
-import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useLocale, useMessages, useTranslations } from "next-intl";
-import { z } from "zod";
-import { FieldErrors, type SubmitHandler, useForm } from "react-hook-form";
-import { clientFormSchema } from "@/lib/form-validation";
-import { Textarea } from "@/components/ui/textarea";
 import LoadingButton from "@/components/ui/loading-button";
-import { format } from "date-fns";
 import {
   Popover,
   PopoverContent,
@@ -27,15 +18,30 @@ import {
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
+  SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { clientFormSchema } from "@/lib/form-validation";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { format } from "date-fns";
+import { arSA, enUS } from "date-fns/locale";
+import { useLocale, useMessages, useTranslations } from "next-intl";
+import { FieldErrors, type SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { z } from "zod";
+
+import { branches } from "@/lib/data";
+
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
-import { CalendarIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { Locale } from "@/routing";
+import { CalendarIcon } from "lucide-react";
 
 type FormData = z.infer<ReturnType<typeof clientFormSchema>>;
 const ContactForm = () => {
@@ -47,10 +53,6 @@ const ContactForm = () => {
   const messages = useMessages();
   //@ts-ignore
   const ages = Object.values(messages?.sections?.contact.form.ages || {});
-  const branches = Object.values(
-    //@ts-ignore
-    messages?.sections?.contact.form.branches || {}
-  );
 
   const form = useForm<FormData>({
     defaultValues: {
@@ -110,7 +112,7 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="pb-10 pt-10 mt-10 mb-10 md:mt-16 shadow-black shadow-lg md:pt-16 lg:mt-20 lg:pt-20 px-5 sm:px-10 space-y-10 w-full bg-primary border-4 border-lime rounded-3xl"
+        className="pb-10 pt-10 mt-10 mb-10 md:mt-16 md:mb-16 shadow-black shadow-lg md:pt-16 lg:mt-20 lg:pt-20 px-5 sm:px-10 space-y-10 w-full bg-primary border-4 border-lime rounded-3xl"
       >
         <div className="space-y-6 md:space-y-8">
           <FormField
@@ -251,9 +253,10 @@ const ContactForm = () => {
                           selected={field.value}
                           onSelect={field.onChange}
                           disabled={(date) =>
-                            date > new Date() || date < new Date("1900-01-01")
+                            date < new Date(new Date().setHours(0, 0, 0, 0))
                           }
                           initialFocus
+                          showOutsideDays={false}
                           classNames={{
                             nav_button_previous:
                               "rtl:right-1 absolute ltr:left-1 top-1/2 -translate-y-1/2",
@@ -293,10 +296,22 @@ const ContactForm = () => {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    {branches.map((age, idx) => (
-                      <SelectItem key={idx} value={age as string}>
-                        {age as string}
-                      </SelectItem>
+                    {branches[locale].map((branch, idx) => (
+                      <>
+                        <SelectGroup key={idx}>
+                          <SelectLabel className="rtl:text-right">
+                            {branch.city}
+                          </SelectLabel>
+                          {branch.branches.map((branch, idx) => (
+                            <SelectItem key={idx} value={branch}>
+                              {branch}
+                            </SelectItem>
+                          ))}
+                        </SelectGroup>
+                        {idx !== branches[locale].length - 1 && (
+                          <SelectSeparator />
+                        )}
+                      </>
                     ))}
                   </SelectContent>
                 </Select>

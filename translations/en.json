@@ -121,19 +121,7 @@
           "error": "Submit has been failed, please try again later",
           "done": "Submitted successfully"
         },
-        "branches": {
-          "branch1": "Stanford Khalifa A",
-          "branch2": "Stanford Zakher",
-          "branch3": "Stanford Mohamed Bin Zayed",
-          "branch4": "Stanford Nad Al Hamar",
-          "branch5": "Stanford Khorfakkan",
-          "branch6": "Stanford Al Sarooj",
-          "branch7": "Stanford Al Towayya",
-          "branch8": "Stanford Al Mushrif",
-          "branch9": "Stanford Al Shahama",
-          "branch10": "Stanford Shakhbout",
-          "branch11": "Stanford Al Shamekha"
-        },
+
         "ages": {
           "age1": "4 to 12 months",
           "age2": "1 to 2 years",
@@ -146,7 +134,8 @@
 
   "footer": {
     "title": "Stay Tuned With Us",
-    "address": "United Arab Emirates"
+    "address": "United Arab Emirates",
+    "copyright": "All rights reserved."
   },
   "zod": {
     "email": "Invalid email",

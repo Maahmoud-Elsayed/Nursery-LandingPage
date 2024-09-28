@@ -1,11 +1,9 @@
-import { Circles, Email } from "@/components/ui/icons";
 import { Card } from "@/components/sections/services/service-card";
 import Container from "@/components/ui/container";
+import { Circles } from "@/components/ui/icons";
+import Section from "@/components/ui/section";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { buttonVariants } from "@/components/ui/button";
-import Section from "@/components/ui/section";
-import { Link } from "@/routing";
 
 const Features = () => {
   const t = useTranslations("sections.features");
@@ -45,22 +43,8 @@ const Features = () => {
               className="space-y-6 p-8"
             />
           </div>
-          <Link
-            className={buttonVariants({
-              variant: "default",
-              size: "lg",
-              className:
-                " uppercase  gap-2.5 items-center  !rounded-full shrink-0 w-fit mx-auto lg:-mt-10",
-            })}
-            href="#contact"
-          >
-            <Email className="h-4 w-4" />
-            <span className=" tracking-widest text-sm uppercase">
-              {t("button")}
-            </span>
-          </Link>
         </div>
-        <div className="relative hidden xl:block w-[400px] h-[550px] shrink-0 rounded-3xl overflow-hidden self-center">
+        <div className="relative hidden xl:block w-[400px] h-[560px] shrink-0 rounded-3xl overflow-hidden self-end">
           <Image src="/images/features.jpg" alt="girl" fill />
         </div>
       </Container>
