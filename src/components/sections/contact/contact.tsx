@@ -32,7 +32,7 @@ const Contact = () => {
                 {t("phone")}
               </h3>
               <p dir="ltr" className="text-primary-text text-lg rtl:text-right">
-                600575752
+                (+20) 12 345 6789
               </p>
             </div>
             <div className="basis-1/2 space-y-4">
@@ -40,7 +40,7 @@ const Contact = () => {
                 {t("email")}
               </h3>
               <p className="text-primary-text text-lg">
-                info@aldananursery.com
+                aldana@example.com
               </p>
             </div>
           </div>
